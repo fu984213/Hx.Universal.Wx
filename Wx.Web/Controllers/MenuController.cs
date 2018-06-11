@@ -16,6 +16,8 @@ namespace Wx.Web.Controllers
 {
     public class MenuController : BaseController
     {
+        // ffuu
+
         #region 获取IP
         private static string IP { get; set; }
 
