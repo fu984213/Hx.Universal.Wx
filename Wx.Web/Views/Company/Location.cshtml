@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "公司位置";
+}
+
+<style type="text/css">
+    #allmap {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        margin: 0;
+        font-family: "微软雅黑";
+    }
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ipT5Vfdqgj6QnUQZeGzwifGSUH86jnff"></script>
+
+<h3>公司位置</h3>
+<hr/>
+<!--百度地图容器-->
+<div id="allmap"></div>
+<!--
+地址：吉林省长春市净月区 生态广场 伟峰‧东第9号楼
+<br />
+-->
+
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(125.38321, 43.81978);
+	map.centerAndZoom(point, 17);
+	var marker = new BMap.Marker(point);            // 创建标注
+	map.addOverlay(marker);                         // 将标注添加到地图中
+	marker.setAnimation(BMAP_ANIMATION_BOUNCE);     //跳动的动画
+</script>
